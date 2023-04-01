@@ -1,0 +1,360 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❌⭕</title>
+    <style>
+        body {
+            background-color: rgb(41, 41, 41);
+        }
+
+        .njish  {
+            display: flex;
+            margin-left: 100px;
+            margin-top: 200px;
+        }
+        .dysh  {
+           display: flex;
+            margin-left: 100px;
+            margin-top: 0px;
+
+        }
+        .tresh  {
+           display: flex;
+           margin-left: 100px;
+           margin-top: 0px;
+
+        }
+        .row {
+            clear: both;
+        }
+        h1{
+            font-size: 45px;
+            color: white;
+            position: absolute;
+            left: 850px;
+            top:35px
+        }
+        #nje{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+        }
+
+        #dy{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+
+        }
+        #tre{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+
+        }
+        #kater{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+
+        }
+        #pese{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+
+        }
+        #gjshte{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+
+        }
+        #shtate{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+
+        }
+        #tete{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+
+        }
+        #nente{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="njish">
+        <button id="nje" onclick="place(this)"></button>
+        <button id="dy" onclick="place(this)"></button>
+        <button id="tre" onclick="place(this)"></button>
+    </div>
+    <div class="dysh">
+        <button id="kater" onclick="place(this)"></button>
+        <button id="pese" onclick="place(this)"></button>
+        <button id="gjshte" onclick="place(this)"></button>
+    </div>
+    <div class="tresh">
+        <button id="shtate" onclick="place(this)"></button>
+
+        <button id="tete" onclick="place(this)"></button>
+        <button id="nente" onclick="place(this)"></button>
+    </div>
+    </div>
+
+    <h1>Fituesi eshte</h1>
+
+    <script>
+        const nje = document.getElementById("nje")
+        const dy = document.getElementById("dy")
+        const tre = document.getElementById("tre")
+        const kater = document.getElementById("kater")
+        const pese = document.getElementById("pese")
+        const gjashte = document.getElementById("gjshte")
+        const shtate = document.getElementById("shtate")
+        const tete = document.getElementById("tete")
+        const nente = document.getElementById("nente")
+        const fitues = document.querySelector("h1")
+        const lista = [nje, dy, tre, kater, pese, gjashte, shtate, tete, nente]
+console.log(lista)
+        var lojtari = "❌";
+    
+
+
+        function place(box) {
+            if (box.innerText != "") return;
+            box.innerText = lojtari;
+            lojtari == "⭕" ? lojtari = "❌" : lojtari = "⭕";
+            
+
+            if(lista[0].innerText == "❌" && lista[1].innerText == "❌" && lista[2].innerText == "❌"){
+                fitues.innerHTML = "Fituesi eshte X"
+                kater.disabled = true
+                pese.disabled = true
+                gjashte.disabled = true
+                shtate.disabled = true
+                tete.disabled = true
+                nente.disabled = true
+                dy.style.background = "green"
+                nje.style.background = "green"
+                tre.style.background = "green"
+            }
+            else if(lista[3].innerText == "❌" && lista[4].innerText == "❌" && lista[5].innerText == "❌"){
+                fitues.innerHTML = "Fituesi eshte X"
+                nje.disabled = true
+                dy.disabled = true
+                tre.disabled = true
+                shtate.disabled = true
+                tete.disabled = true
+                nente.disabled = true
+                kater.style.background = "green"
+                pese.style.background = "green"
+                gjashte.style.background = "green"
+            }
+            else if(lista[6].innerText == "❌" && lista[7].innerText == "❌" && lista[8].innerText == "❌"){
+                fitues.innerHTML = "Fituesi eshte X"
+                nje.disabled = true
+                dy.disabled = true
+                tre.disabled = true
+                kater.disabled = true
+                pese.disabled = true
+                gjashte.disabled = true
+                shtate.style.background = "green"
+                tete.style.background = "green"
+                nente.style.background = "green"
+            }
+
+
+
+
+
+
+            else if(lista[0].innerText == "❌" && lista[3].innerText == "❌" && lista[6].innerText == "❌"){
+            fitues.innerHTML = "Fituesi eshte X"
+            tete.disabled = true
+                dy.disabled = true
+                gjashte.disabled = true
+                pese.disabled = true
+                tre.disabled = true
+                nente.disabled = true    
+                nje.style.background = "green"
+                kater.style.background = "green"
+                shtate.style.background = "green"
+            }
+            else if(lista[1].innerText == "❌" && lista[4].innerText == "❌" && lista[7].innerText == "❌"){
+                fitues.innerHTML = "Fituesi eshte X"
+                nje.disabled = true
+                kater.disabled = true
+                shtate.disabled = true
+                gjashte.disabled = true
+                tre.disabled = true
+                nente.disabled = true
+                dy.style.background = "green"
+                pese.style.background = "green"
+                tete.style.background = "green"    
+            }
+            else if(lista[2].innerText == "❌" && lista[5].innerText == "❌" && lista[8].innerText == "❌" ){
+                fitues.innerHTML = "Fituesi eshte X"
+                nje.disabled = true
+                dy.disabled = true
+                kater.disabled = true
+                pese.disabled = true
+                tete.disabled = true
+                shtate.disabled = true    
+                tre.style.background = "green"
+            gjashte.style.background = "green"
+                nente.style.background = "green"
+            }
+            else if(lista[0].innerText == "❌" && lista[4].innerText == "❌" && lista[8].innerText == "❌"){
+                fitues.innerHTML = "Fituesi eshte X"
+                tre.disabled = true
+                dy.disabled = true
+                gjashte.disabled = true
+                kater.disabled = true
+                tete.disabled = true
+                shtate.disabled = true    
+                nje.style.background = "green"
+                pese.style.background = "green"
+                nente.style.background = "green"
+                
+
+            }
+            else if(lista[2].innerText == "❌" && lista[4].innerText == "❌" && lista[6].innerText == "❌"){
+                fitues.innerHTML = "Fituesi eshte X"
+                nje.disabled = true
+                dy.disabled = true
+                gjashte.disabled = true
+                kater.disabled = true
+                tete.disabled = true
+                nente.disabled = true    
+                tre.style.background = "green"
+                pese.style.background = "green"
+                shtate.style.background = "green"
+                
+            }
+            if(lista[0].innerText == "⭕" && lista[1].innerText == "⭕" && lista[2].innerText == "⭕"){
+                fitues.innerHTML = "Fituesi eshte O"
+                kater.disabled = true
+                pese.disabled = true
+                gjashte.disabled = true
+                shtate.disabled = true
+                tete.disabled = true
+                nente.disabled = true
+                tre.style.background = "green"
+                dy.style.background = "green"
+                nje.style.background = "green"
+            }
+            else if(lista[3].innerText == "⭕" && lista[4].innerText == "⭕" && lista[5].innerText =="⭕"){
+                fitues.innerHTML = "Fituesi eshte O"
+                nje.disabled = true
+                dy.disabled = true
+                tre.disabled = true
+                shtate.disabled = true
+                tete.disabled = true
+                nente.disabled = true
+                kater.style.background = "green"
+                pese.style.background = "green"
+                gjashte.style.background = "green"
+            }
+            else if(lista[6].innerText == "⭕" && lista[7].innerText == "⭕" && lista[8].innerText =="⭕"){
+                fitues.innerHTML = "Fituesi eshte O"
+                nje.disabled = true
+                dy.disabled = true
+                tre.disabled = true
+                kater.disabled = true
+                pese.disabled = true
+                gjashte.disabled = true
+                shtate.style.background = "green"
+                tete.style.background = "green"
+                nente.style.background = "green"
+            }
+            else if(lista[0].innerText == "⭕" && lista[3].innerText == "⭕" && lista[6].innerText =="⭕"){
+                fitues.innerHTML = "Fituesi eshte O"
+                tete.disabled = true
+                dy.disabled = true
+                gjashte.disabled = true
+                pese.disabled = true
+                tre.disabled = true
+                nente.disabled = true    
+                nje.style.background = "green"
+                kater.style.background = "green"
+                shtate.style.background = "green"
+            }
+            else if(lista[1].innerText == "⭕" && lista[4].innerText == "⭕" && lista[7].innerText =="⭕"){
+                fitues.innerHTML = "Fituesi eshte O"
+                nje.disabled = true
+                kater.disabled = true
+                shtate.disabled = true
+                gjashte.disabled = true
+                tre.disabled = true
+                nente.disabled = true
+                dy.style.background = "green"
+                pese.style.background = "green"
+                tete.style.background = "green"
+            }
+            else if(lista[2].innerText == "⭕" && lista[5].innerText == "⭕" && lista[8].innerText =="⭕"){
+                fitues.innerHTML = "Fituesi eshte O"
+                nje.disabled = true
+                dy.disabled = true
+                kater.disabled = true
+                pese.disabled = true
+                tete.disabled = true
+                shtate.disabled = true    
+                tre.style.background = "green"
+                gjashte.style.background = "green"
+                nente.style.background = "green"
+            }
+            else if(lista[0].innerText == "⭕" && lista[4].innerText == "⭕" && lista[8].innerText =="⭕"){
+                fitues.innerHTML = "Fituesi eshte O"
+                tre.disabled = true
+                dy.disabled = true
+                gjashte.disabled = true
+                kater.disabled = true
+                tete.disabled = true
+                shtate.disabled = true    
+                nje.style.background = "green"
+                pese.style.background = "green"
+                nente.style.background = "green"
+                
+            }
+            else if(lista[2].innerText == "⭕" && lista[4].innerText == "⭕" && lista[6].innerText =="⭕"){
+                fitues.innerHTML = "Fituesi eshte O"
+                nje.disabled = true
+                dy.disabled = true
+                gjashte.disabled = true
+                kater.disabled = true
+                tete.disabled = true
+                nente.disabled = true    
+                tre.style.background = "green"
+                pese.style.background = "green"
+                shtate.style.background = "green"
+                
+            }
+          
+        }
+
+    </script>
+</body>
+
+</html>
